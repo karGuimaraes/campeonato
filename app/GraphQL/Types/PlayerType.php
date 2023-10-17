@@ -6,6 +6,7 @@ namespace App\GraphQL\Types;
 
 use App\Models\Player;
 use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class PlayerType extends GraphQLType
@@ -39,6 +40,11 @@ class PlayerType extends GraphQLType
                 'description' => 'E-mail do jogador',
                 'rules' => ['required', 'string', 'max:50', 'email', 'unique:players,email']
             ],
+            'player_has_team' => [
+                'type' => GraphQL::type('PlayerHasTeam'),
+                'description' => 'Time do jogador',
+                'selectable' => false
+            ]
         ];
     }
 }

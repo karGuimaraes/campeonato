@@ -48,11 +48,11 @@ return [
                 'deleteTeam' => App\GraphQL\Mutations\Team\DeleteTeamMutation::class,
             ],
             'types' => [
-                // Player
                 'Player' => App\GraphQL\Types\PlayerType::class,
                 'Game' => App\GraphQL\Types\GameType::class,
                 'Championship' => App\GraphQL\Types\ChampionshipType::class,
                 'Team' => App\GraphQL\Types\TeamType::class,
+                'PlayerHasTeam' => App\GraphQL\Types\PlayerHasTeamType::class,
             ],
 
             // Laravel HTTP middleware
