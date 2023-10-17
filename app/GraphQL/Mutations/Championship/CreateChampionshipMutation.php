@@ -41,17 +41,20 @@ class CreateChampionshipMutation extends Mutation
             'game_id' => [
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'Identificador do jogo',
-                'rules' => ['required', 'integer', 'exists:games,id']
+                'rules' => ['required', 'integer', 'exists:games,id'],
+                'defaultValue' => '1'
             ],
             'total_players_team' => [
                 'type' => Type::int(),
                 'description' => 'Total de jogadores por time',
-                'rules' => ['somentime', 'integer', 'min:1', 'max:10']
+                'rules' => ['nullable', 'integer', 'min:1', 'max:10'],
+                'defaultValue' => '5'
             ],
             'total_teams' => [
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'Total de times',
-                'rules' => ['required', 'integer', 'min:1', 'max:30']
+                'rules' => ['required', 'integer', 'min:1', 'max:30'],
+                'defaultValue' => '10'
             ]
         ];
 

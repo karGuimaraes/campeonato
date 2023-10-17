@@ -46,7 +46,7 @@ class ChampionshipType extends GraphQLType
             'total_players_team' => [
                 'type' => Type::int(),
                 'description' => 'Total de jogadores por time',
-                'rules' => ['somentime', 'integer', 'min:1', 'max:10']
+                'rules' => ['nullable', 'integer', 'min:1', 'max:10']
             ],
             'total_teams' => [
                 'type' => Type::nonNull(Type::int()),

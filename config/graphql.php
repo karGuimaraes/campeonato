@@ -22,6 +22,10 @@ return [
                 // Player
                 'players' => App\GraphQL\Queries\Player\PlayersQuery::class,
                 'player' => App\GraphQL\Queries\Player\PlayerQuery::class,
+
+                // Championship
+                'championships' => App\GraphQL\Queries\Championship\ChampionshipsQuery::class,
+                'championship' => App\GraphQL\Queries\Championship\ChampionshipQuery::class,
             ],
             'mutation' => [
                 // Player
@@ -32,6 +36,7 @@ return [
                 // Championship
                 'createChampionship' => App\GraphQL\Mutations\Championship\CreateChampionshipMutation::class,
                 'updateChampionship' => App\GraphQL\Mutations\Championship\UpdateChampionshipMutation::class,
+                'deleteChampionship' => App\GraphQL\Mutations\Championship\DeleteChampionshipMutation::class,
             ],
             'types' => [
                 // Player
