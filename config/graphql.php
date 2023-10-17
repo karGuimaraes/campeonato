@@ -26,6 +26,10 @@ return [
                 // Championship
                 'championships' => App\GraphQL\Queries\Championship\ChampionshipsQuery::class,
                 'championship' => App\GraphQL\Queries\Championship\ChampionshipQuery::class,
+
+                // Team
+                'teams' => App\GraphQL\Queries\Team\TeamsQuery::class,
+                'team' => App\GraphQL\Queries\Team\TeamQuery::class,
             ],
             'mutation' => [
                 // Player
@@ -37,12 +41,18 @@ return [
                 'createChampionship' => App\GraphQL\Mutations\Championship\CreateChampionshipMutation::class,
                 'updateChampionship' => App\GraphQL\Mutations\Championship\UpdateChampionshipMutation::class,
                 'deleteChampionship' => App\GraphQL\Mutations\Championship\DeleteChampionshipMutation::class,
+
+                // Team
+                'createTeam' => App\GraphQL\Mutations\Team\CreateTeamMutation::class,
+                'updateTeam' => App\GraphQL\Mutations\Team\UpdateTeamMutation::class,
+                'deleteTeam' => App\GraphQL\Mutations\Team\DeleteTeamMutation::class,
             ],
             'types' => [
                 // Player
                 'Player' => App\GraphQL\Types\PlayerType::class,
                 'Game' => App\GraphQL\Types\GameType::class,
                 'Championship' => App\GraphQL\Types\ChampionshipType::class,
+                'Team' => App\GraphQL\Types\TeamType::class,
             ],
 
             // Laravel HTTP middleware
